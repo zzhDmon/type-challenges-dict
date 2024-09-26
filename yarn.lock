@@ -321,6 +321,11 @@
     estraverse "^5.3.0"
     picomatch "^4.0.2"
 
+"@type-challenges/utils@^0.1.1":
+  version "0.1.1"
+  resolved "http://npm.meitu-int.com/@type-challenges%2futils/-/utils-0.1.1.tgz#18ce289fb84caf1c13eee211226dbf2bc6195ed3"
+  integrity sha512-A7ljYfBM+FLw+NDyuYvGBJiCEV9c0lPWEAdzfOAkb3JFqfLl0Iv/WhWMMARHiRKlmmiD1g8gz/507yVvHdQUYA==
+
 "@types/eslint@^9.6.0":
   version "9.6.1"
   resolved "http://npm.meitu-int.com/@types%2feslint/-/eslint-9.6.1.tgz#d5795ad732ce81715f27f75da913004a56751584"
@@ -1441,11 +1446,6 @@ is-path-inside@^3.0.3:
   version "3.0.3"
   resolved "http://npm.meitu-int.com/is-path-inside/-/is-path-inside-3.0.3.tgz#d231362e53a07ff2b0e0ea7fed049161ffd16283"
   integrity sha1-0jE2LlOgf/Kw4Op/7QSRYf/RYoM=
-
-is-unicode-supported@^1.3.0:
-  version "1.3.0"
-  resolved "http://npm.meitu-int.com/is-unicode-supported/-/is-unicode-supported-1.3.0.tgz#d824984b616c292a2e198207d4a609983842f714"
-  integrity sha512-43r2mRvz+8JRIKnWJ+3j8JtjRKZ6GmjzfaE/qiBJnikNnYv/6bagRJ1kUhNk8R5EX/GkobD+r+sfxCPJsiKBLQ==
 
 isexe@^2.0.0:
   version "2.0.0"

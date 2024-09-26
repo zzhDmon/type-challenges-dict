@@ -15,6 +15,7 @@
     "utils:release": "pnpm -C utils release"
   },
   "dependencies": {
+    "@type-challenges/utils": "^0.1.1",
     "esno": "^4.0.0",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
