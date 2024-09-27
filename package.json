@@ -19,6 +19,7 @@
     "esno": "^4.0.0",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
+    "inquirer": "^11.0.2",
     "js-yaml": "^4.1.0",
     "lz-string": "^1.5.0"
   },
