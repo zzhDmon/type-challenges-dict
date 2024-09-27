@@ -12,9 +12,10 @@ function getSubfolders(directory) {
 }
 // 拷贝文件
 function copyFiles(sourceDir, targetDir, filesToCopy) {
-  if (!fs.existsSync(targetDir)) {
-    fs.mkdirSync(targetDir)
+  if (fs.existsSync(targetDir)) {
+    throw new Error(`Target directory ${targetDir} already exists`)
   }
+  fs.mkdirSync(targetDir, { recursive: true })
 
   filesToCopy.forEach((file) => {
     const sourceFile = path.join(sourceDir, file)
@@ -28,6 +29,7 @@ function copyFiles(sourceDir, targetDir, filesToCopy) {
     }
   })
 }
+
 // 选择questions目录下的子文件夹
 async function selectSubfolder(folderName) {
   const subfolders = folderName ? getSubfolders(questionsDir).filter(subfolder => subfolder.includes(folderName)) : getSubfolders(questionsDir)
@@ -46,22 +48,12 @@ async function selectSubfolder(folderName) {
   ])
   const selectedFolder = answer.selectedFolder
   const sourceDir = path.join(questionsDir, selectedFolder)
-  const targetDir = path.join(solutionsDir, selectedFolder)
-  copyFiles(sourceDir, targetDir, ['test-cases.ts', 'template.ts'])
-}
-// 添加子文件夹并拷贝文件
-function addAndCopyFolder(folderName) {
-  let matchingFolders = getSubfolders(questionsDir).filter(subfolder => subfolder.includes(folderName))
-  if (matchingFolders.length === 0) {
-    console.log(`No matching subfolders found for "${folderName}"`)
-    return
+
+  const level = selectedFolder.split('-')[1]
+  if (!level) {
+    throw new Error(`unknow level`)
   }
-  let selectedFolder = matchingFolders[0]
-  if (matchingFolders.length > 1) {
-    selectedFolder = matchingFolders.find(subfolder => subfolder === folderName) || matchingFolders[0]
-  }
-  const sourceDir = path.join(questionsDir, selectedFolder)
-  const targetDir = path.join(solutionsDir, selectedFolder)
+  const targetDir = path.join(solutionsDir, level, selectedFolder)
   copyFiles(sourceDir, targetDir, ['test-cases.ts', 'template.ts'])
 }
 // 主函数
