@@ -28,6 +28,8 @@ function copyFiles(sourceDir, targetDir, filesToCopy) {
       console.log(`File ${file} does not exist in ${sourceDir}`)
     }
   })
+
+  fs.writeFileSync(path.join(targetDir, 'template.js'), '', 'utf8')
 }
 
 // 选择questions目录下的子文件夹
