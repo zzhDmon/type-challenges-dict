@@ -6,6 +6,9 @@
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
   "repository": "https://github.com/antfu/type-challenges.git",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "readme": "esno ./scripts/readme.ts",
     "build": "esno ./scripts/build.ts",

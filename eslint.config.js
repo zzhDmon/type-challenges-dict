@@ -7,6 +7,7 @@ module.exports = antfu(
   {
     rules: {
       'import/first': 'off',
+      'style/quote-props': 'off',
       'no-alert': 'off',
       'no-unused-expressions': 'off',
       'no-unused-vars': 'off',
@@ -19,6 +20,7 @@ module.exports = antfu(
       'ts/no-require-imports': 'off',
       'ts/no-unused-vars': 'off',
       'unused-imports/no-unused-vars': 'off',
+      'ts/no-unsafe-function-type': 'off',
     },
   },
 )
