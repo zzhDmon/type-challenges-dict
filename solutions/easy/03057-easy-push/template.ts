@@ -1,2 +1,14 @@
 type Push<T extends readonly any[], U> = [...T, U]
-// type Push<T extends unknown[], U> = [...T, U]
+
+/*
+## 注释
+### 类型参数
+  - `T extends readonly any[]`:
+  - 这是泛型参数 `T`，必须是一个只读数组类型。`readonly` 表示该数组不可变。
+  - 数组中的元素可以是任何类型（即 `any[]`）。
+  - `U`:
+  - 这是要添加到数组 `T` 末尾的元素，它的类型没有限制，可以是任何类型。
+
+### 展开运算符（Spread Operator）
+  TypeScript 中的展开运算符 `...` 可以用于在类型系统中将元组或数组类型展开为单个元素。通过使用展开运算符，我们能够将数组类型 `T` 的所有元素与新元素 `U` 合并到一个新的数组类型中。
+*/
