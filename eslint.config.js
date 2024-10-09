@@ -21,6 +21,7 @@ module.exports = antfu(
       'ts/no-unused-vars': 'off',
       'unused-imports/no-unused-vars': 'off',
       'ts/no-unsafe-function-type': 'off',
+      'ts/no-empty-object-type': 'off',
     },
   },
 )
